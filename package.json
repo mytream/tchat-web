@@ -1,0 +1,8 @@
+{
+  "name": "tchat-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mytream/tchat-web.git",
+  "author": "mytream <yuanyongzhi@tezign.com>",
+  "license": "MIT"
+}
