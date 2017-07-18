@@ -1,9 +1,9 @@
-var path = require('path');
-var autoprefixer = require('autoprefixer');
-var webpack = require('webpack');
-var HappyPack = require('happypack');
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
+const HappyPack = require('happypack');
 
-var config = {
+const config = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'

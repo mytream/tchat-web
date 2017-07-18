@@ -1,0 +1,18 @@
+@import './common/scss/variables.scss';
+@import './common/scss/reset.scss';
+@import './common/scss/common.scss';
+@import './common/scss/button.scss';
+@import './common/scss/forms.scss';
+@import "./common/scss/lists.scss";
+@import './common/scss/layout.scss';
+
+html, body
+{
+  overflow: hidden;
+}
+
+#rc-root
+{
+  height: 100%;
+}
+

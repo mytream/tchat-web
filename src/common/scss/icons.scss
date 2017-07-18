@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    font-url('icomoon.eot?tt7wfu');
+    src:    font-url('icomoon.eot?tt7wfu#iefix') format('embedded-opentype'),
+    font-url('icomoon.ttf?tt7wfu') format('truetype'),
+    font-url('icomoon.woff?tt7wfu') format('woff'),
+    font-url('icomoon.svg?tt7wfu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-motion:before {
+    content: "\e966";
+}
+.icon-tz-graphic_big:before {
+    content: "\e963";
+}
+.icon-tz-illustration_big:before {
+    content: "\e964";
+}
+.icon-tz-ui_big:before {
+    content: "\e965";
+}
+.icon-tz-question:before {
+    content: "\e962";
+}
+.icon-tz-template:before {
+    content: "\e922";
+}
+.icon-tz-details:before {
+    content: "\e957";
+}
+.icon-tz-digital:before {
+    content: "\e958";
+}
+.icon-tz-else:before {
+    content: "\e959";
+}
+.icon-tz-graphic:before {
+    content: "\e95a";
+}
+.icon-tz-idea2:before {
+    content: "\e95b";
+}
+.icon-tz-illustration:before {
+    content: "\e95c";
+}
+.icon-tz-mandatory:before {
+    content: "\e95d";
+}
+.icon-tz-model:before {
+    content: "\e95e";
+}
+.icon-tz-social:before {
+    content: "\e95f";
+}
+.icon-tz-ui:before {
+    content: "\e960";
+}
+.icon-tz-video2:before {
+    content: "\e961";
+}
+.icon-tz-female:before {
+    content: "\e955";
+}
+.icon-tz-male:before {
+    content: "\e956";
+}
+.icon-tz_empty:before {
+    content: "\e953";
+}
+.icon-tz_full:before {
+    content: "\e954";
+}
+.icon-tz-copy:before {
+    content: "\e952";
+}
+.icon-tz-acceptable:before {
+    content: "\e94f";
+}
+.icon-tz-money:before {
+    content: "\e950";
+}
+.icon-tz-more:before {
+    content: "\e951";
+}
+.icon-tz-credit:before {
+    content: "\e94e";
+}
+.icon-tz-company:before {
+    content: "\e94d";
+}
+.icon-tz-group:before {
+    content: "\e94c";
+}
+.icon-tz-warn:before {
+    content: "\e94b";
+}
+.icon-tz-verify:before {
+    content: "\e94a";
+}
+.icon-tz-coupon:before {
+    content: "\e949";
+}
+.icon-tz-stop:before {
+    content: "\e900";
+}
+.icon-tz-ongoing:before {
+    content: "\e901";
+}
+.icon-tz-review:before {
+    content: "\e902";
+}
+.icon-tz-unreview:before {
+    content: "\e903";
+}
+.icon-tz-bell:before {
+    content: "\e904";
+}
+.icon-tz-bin:before {
+    content: "\e905";
+}
+.icon-tz-blist:before {
+    content: "\e906";
+}
+.icon-tz-board:before {
+    content: "\e907";
+}
+.icon-tz-break:before {
+    content: "\e908";
+}
+.icon-tz-client:before {
+    content: "\e909";
+}
+.icon-tz-contract:before {
+    content: "\e90a";
+}
+.icon-tz-copyright:before {
+    content: "\e90b";
+}
+.icon-tz-count:before {
+    content: "\e90c";
+}
+.icon-tz-cube:before {
+    content: "\e90d";
+}
+.icon-tz-disable:before {
+    content: "\e90e";
+}
+.icon-tz-done:before {
+    content: "\e90f";
+}
+.icon-tz-down:before {
+    content: "\e910";
+}
+.icon-tz-download:before {
+    content: "\e911";
+}
+.icon-tz-edit:before {
+    content: "\e912";
+}
+.icon-tz-eye:before {
+    content: "\e913";
+}
+.icon-tz-file:before {
+    content: "\e914";
+}
+.icon-tz-find:before {
+    content: "\e915";
+}
+.icon-tz-heart:before {
+    content: "\e916";
+}
+.icon-tz-human:before {
+    content: "\e917";
+}
+.icon-tz-idea:before {
+    content: "\e918";
+}
+.icon-tz-ing:before {
+    content: "\e919";
+}
+.icon-tz-key:before {
+    content: "\e91a";
+}
+.icon-tz-leave:before {
+    content: "\e91b";
+}
+.icon-tz-left:before {
+    content: "\e91c";
+}
+.icon-tz-link:before {
+    content: "\e91d";
+}
+.icon-tz-list:before {
+    content: "\e91e";
+}
+.icon-tz-lock:before {
+    content: "\e91f";
+}
+.icon-tz-mail:before {
+    content: "\e920";
+}
+.icon-tz-manager:before {
+    content: "\e921";
+}
+.icon-tz-minus:before {
+    content: "\e923";
+}
+.icon-tz-move:before {
+    content: "\e924";
+}
+.icon-tz-msg:before {
+    content: "\e925";
+}
+.icon-tz-off:before {
+    content: "\e926";
+}
+.icon-tz-out:before {
+    content: "\e927";
+}
+.icon-tz-pay:before {
+    content: "\e928";
+}
+.icon-tz-pic:before {
+    content: "\e929";
+}
+.icon-tz-plane:before {
+    content: "\e92a";
+}
+.icon-tz-plus:before {
+    content: "\e92b";
+}
+.icon-tz-price:before {
+    content: "\e92c";
+}
+.icon-tz-project:before {
+    content: "\e92d";
+}
+.icon-tz-reject:before {
+    content: "\e92e";
+}
+.icon-tz-review1:before {
+    content: "\e92f";
+}
+.icon-tz-review2:before {
+    content: "\e930";
+}
+.icon-tz-review3:before {
+    content: "\e931";
+}
+.icon-tz-right:before {
+    content: "\e932";
+}
+.icon-tz-sale:before {
+    content: "\e933";
+}
+.icon-tz-search:before {
+    content: "\e934";
+}
+.icon-tz-setting:before {
+    content: "\e935";
+}
+.icon-tz-share:before {
+    content: "\e936";
+}
+.icon-tz-shut:before {
+    content: "\e937";
+}
+.icon-tz-sina:before {
+    content: "\e938";
+}
+.icon-tz-star:before {
+    content: "\e939";
+}
+.icon-tz-success:before {
+    content: "\e93a";
+}
+.icon-tz-time:before {
+    content: "\e93b";
+}
+.icon-tz-today:before {
+    content: "\e93c";
+}
+.icon-tz-tool:before {
+    content: "\e93d";
+}
+.icon-tz-un:before {
+    content: "\e93e";
+}
+.icon-tz-undo:before {
+    content: "\e93f";
+}
+.icon-tz-unhappy:before {
+    content: "\e940";
+}
+.icon-tz-unionpay:before {
+    content: "\e941";
+}
+.icon-tz-up:before {
+    content: "\e942";
+}
+.icon-tz-upload:before {
+    content: "\e943";
+}
+.icon-tz-video:before {
+    content: "\e944";
+}
+.icon-tz-wechat:before {
+    content: "\e945";
+}
+.icon-tz-wechatpay:before {
+    content: "\e946";
+}
+.icon-tz-alipay:before {
+    content: "\e947";
+}
+.icon-tz-zhihu:before {
+    content: "\e948";
+}
+

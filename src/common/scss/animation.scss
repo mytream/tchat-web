@@ -1,0 +1,20 @@
+@keyframes loader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin animation-loader-spin
+{
+  @include animation(loader-spin 1s steps(12, end) infinite);
+}
+
+@keyframes scale-75
+{
+  8% {
+    transform: scale(0.625);
+  }
+  92% {
+    transform: scale(0.625);
+  }
+}

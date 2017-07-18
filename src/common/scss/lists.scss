@@ -1,0 +1,118 @@
+@import "./variables";
+@import "./mixins";
+
+.file-list
+{
+  .list-wrapper
+  {
+    @include clear-fix;
+    margin-right: -50px;
+    margin-bottom: -30px;
+  }
+  .list-item
+  {
+    display: block;
+    float: left;
+    position: relative;
+    width: 120px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    .item-link
+    {
+      display: block;
+    }
+    .item-thumb,
+    .item-thumb-hover
+    {
+      transition: opacity 300ms;
+      display: block;
+      box-sizing: border-box;
+      width: 120px;
+      height: 120px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .item-thumb
+    {
+      opacity: 1;
+      background-color: #fafafa;
+      padding-top: 29px;
+      .thumb-icon
+      {
+        display: block;
+        width: 50px;
+        height: 63px;
+        margin: auto;
+      }
+    }
+    .item-thumb-hover
+    {
+      z-index: 3;
+      opacity: 0;
+      position: absolute;
+      top : 0;
+      left: 0;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding-top: 36px;
+      .thumb-icon
+      {
+        line-height: 30px;
+        font-size: 30px;
+      }
+      .thumb-text
+      {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+    .item-text
+    {
+      @include text-ellipsis;
+      text-align: center;
+      font-size: 12px;
+    }
+    &:hover
+    {
+      .item-thumb
+      {
+        opacity: 0;
+      }
+      .item-thumb-hover
+      {
+        opacity: 1;
+      }
+      .item-text
+      {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.dots-list
+{
+  .list-item
+  {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    &:before
+    {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-text;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

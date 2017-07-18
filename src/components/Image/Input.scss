@@ -1,0 +1,98 @@
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+.image-input
+{
+  .input-blank
+  {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 15px;
+    border: 1px dashed $color-border;
+    background-color: #fafafa;
+    color: $color-text-light;
+    &:hover
+    {
+      color: $color-primary;
+      border-color: $color-primary;
+      background-color: transparent;
+    }
+    .blank-inner
+    {
+      height: 100%;
+      @include display-flex;
+      @include flex-justify-content-center;
+      flex-direction: column;
+    }
+    .blank-icon
+    {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      line-height: 1em;
+      margin-bottom: 15px;
+    }
+    .blank-text
+    {
+      display: block;
+      text-align: center;
+    }
+  }
+  .input-result
+  {
+    position: relative;
+    height: 100%;
+    img
+    {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover
+    {
+      .uploader-bar
+      {
+        @include flex-box;
+      }
+    }
+    .uploader-bar
+    {
+      display: none;
+      @include position-center;
+      z-index: 9;
+      color: #fff;
+      background-color: rgba(0, 0, 0, .5);
+      .bar-item
+      {
+        @include flex-box-item;
+        @include flex-1;
+        .item-box
+        {
+          text-align: center;
+          width: 100%;
+        }
+        .item-action
+        {
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          .action-icon
+          {
+            display: block;
+            font-size: 20px;
+          }
+          .action-text
+          {
+            display: block;
+          }
+          &:hover
+          {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

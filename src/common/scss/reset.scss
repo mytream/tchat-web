@@ -1,0 +1,266 @@
+@import "variables";
+
+body
+{
+  font-size   : 14px;
+  font-weight : 300;
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:  rgba(0,0,0,0);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-weight : inherit;
+}
+
+a, a:hover
+{
+  color           : inherit;
+  text-decoration : none;
+}
+
+a, i
+{
+  &:hover
+  {
+    transition : $transition-duration-normal;
+  }
+}
+
+strong
+{
+  font-weight: normal;
+  color: $color-text-dark;
+}
+
+input::-webkit-contacts-auto-fill-button
+{
+  visibility:hidden;
+  display:none!important;
+  pointer-events:none;
+  position:absolute;
+  right:0;
+}
+
+::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+input:focus::-webkit-contacts-auto-fill-button{
+  opacity: 0;
+}
+
+::-webkit-scrollbar
+{
+  width : 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color : transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color : rgba(0, 0, 0, 0.2);
+  //border-radius: 4px;
+}
+
+
+.ant-checkbox-wrapper:hover
+{
+  color: $color-text-dark;
+}
+.ant-checkbox-inner
+{
+  width            : 16px;
+  height           : 16px;
+  box-shadow       : inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius    : 2px;
+  background-color : #f4f4f4;
+}
+
+.ant-checkbox-checked
+{
+  & + span
+  {
+    color : $color-text-dark;
+    font-weight: normal;
+  }
+  .ant-checkbox-inner:after
+  {
+    left : 4px;
+    top  : 1px;
+  }
+}
+
+.ant-radio-inner
+{
+  width            : 16px;
+  height           : 16px;
+  background-color : #f4f4f4;
+  &:after
+  {
+    width  : 8px;
+    height : 8px;
+    left   : 3px;
+    top    : 3px;
+  }
+}
+
+.ant-radio-checked .ant-radio-inner
+{
+  box-shadow : inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ant-radio-wrapper:hover
+{
+  cursor : pointer;
+  color: $color-text-dark;
+}
+
+.ant-radio-wrapper-checked
+{
+  color : $color-text-dark;
+  font-weight: normal;
+}
+
+.ant-notification-notice-content-icon-message
+{
+  word-break   : break-all;
+  margin-right : 15px;
+}
+
+.ant-select{
+  .ant-select-selection{
+    border-radius: 2px;
+    background-color: #fafafa;
+    border: solid 0.7px #dddddd;
+    box-shadow: none;
+
+    .ant-select-selection__rendered{
+      text-align: left;
+    }
+  }
+
+  &.ant-select-open{
+    .ant-select-selection{
+      outline: none;
+      border-color: $color-primary;
+    }
+  }
+}
+.ant-cascader-menu-item:hover ,
+.ant-select-dropdown-menu-item-active ,
+.ant-select-dropdown-menu-item:hover
+{
+  background-color: $color-bg-2;
+}
+
+.ant-select-dropdown-menu-item
+{
+  font-weight: 300;
+}
+.ant-select-dropdown-menu-item-selected ,
+.ant-select-dropdown-menu-item-selected:hover
+{
+  font-weight: normal;
+}
+
+.ant-message
+{
+  font-size : 14px;
+  .anticon
+  {
+    font-size : 16px;
+  }
+}
+
+// tooltip reset
+.ant-tooltip
+{
+  font-size   : 12px;
+  opacity     : 1;
+
+  .ant-tooltip-inner
+  {
+    border-radius : 3px;
+    padding       : 6px 10px;
+    min-height    : 30px;
+  }
+
+  &.ant-tooltip-placement-right
+  {
+    padding-left: 7px;
+  }
+
+  &.theme-light
+  {
+    .ant-tooltip-arrow
+    {
+      z-index: 3;
+      border: none;
+      width: 10px;
+      height: 10px;
+      box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+    .ant-tooltip-inner
+    {
+      box-sizing: content-box;
+      padding: 15px;
+      color: $color-text;
+      background-color : #fff;
+    }
+    &.ant-tooltip-placement-right
+    {
+
+    }
+  }
+
+  &.width-sm
+  {
+    .ant-tooltip-inner
+    {
+      width: 16em;
+    }
+  }
+
+  &.navbar-tip
+  {
+    left : 54px !important;
+  }
+
+  &.project-opt-tip
+  {
+  }
+}
+
+.ant-modal-body
+{
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.ant-input-lg
+{
+  height: 36px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 3px;
+  border-color: #eaeaea;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color:$color-text-light;
+}

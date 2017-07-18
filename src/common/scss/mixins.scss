@@ -1,0 +1,177 @@
+@import "animation";
+
+@mixin position-center
+{
+  position : absolute;
+  top      : 0;
+  bottom   : 0;
+  left     : 0;
+  right    : 0;
+  margin   : auto;
+}
+
+@mixin full-size
+{
+  width  : 100%;
+  height : 100%;
+}
+
+@mixin border-box
+{
+  box-sizing         : border-box;
+}
+
+@mixin full-box
+{
+  @include border-box;
+  @include full-size;
+  display : block;
+}
+
+@mixin relative-box
+{
+  @include border-box;
+  @include full-size;
+  display  : block;
+  position : relative;
+  overflow : hidden;
+}
+
+@mixin display-flex
+{
+  display : -webkit-box;
+  display : -webkit-flex;
+  display : flex;
+}
+@mixin flex-align-items-start
+{
+  -webkit-box-align   : start;
+  -webkit-align-items : flex-start;
+  align-items         : flex-start;
+}
+@mixin flex-align-items-center
+{
+  -webkit-box-align       : center;
+  -webkit-align-items     : center;
+  align-items             : center;
+}
+@mixin flex-align-items-end
+{
+  -webkit-box-align   : end;
+  -webkit-align-items : flex-end;
+  align-items         : flex-end;
+}
+@mixin flex-justify-content-start
+{
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+@mixin flex-justify-content-center
+{
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+@mixin flex-justify-content-end
+{
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+@mixin flex-justify-content-between
+{
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@mixin flex-1
+{
+  -webkit-box-flex        : 1;
+  -webkit-flex            : 1;
+  flex                    : 1;
+  box-sizing: border-box;
+}
+
+
+@mixin flex-box
+{
+  @include border-box;
+  @include display-flex;
+  @include flex-align-items-center;
+  @include flex-justify-content-between;
+}
+
+@mixin flex-box-item
+{
+  display: block;
+  @include flex-1;
+}
+
+@mixin clear-fix
+{
+  &:before,
+  &:after
+  {
+    display : table;
+    content : "";
+    clear   : both;
+  }
+}
+
+//转换
+@mixin transform($transform...) {
+  -webkit-transform : $transform;
+  transform         : $transform;
+}
+
+//3d 转换
+@mixin translate3d($x:0, $y:0, $z:0) {
+  -webkit-transform : translate3d($x, $y, $z);
+  transform         : translate3d($x, $y, $z);
+}
+
+// 过度
+@mixin transition($transition...) {
+  -webkit-transition : $transition;
+  transition         : $transition;
+}
+
+@mixin animation($animation...)
+{
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+// 单行文字自动省略
+@mixin text-ellipsis
+{
+  display       : block;
+  text-overflow : ellipsis;
+  white-space   : nowrap;
+  overflow      : hidden;
+}
+
+@mixin native-scroll
+{
+  overflow                   : auto;
+  -webkit-overflow-scrolling : touch;
+}
+
+// 圆形
+@mixin circle($width){
+  display: inline-block;
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+}
+
+@mixin box-shadow-1
+{
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+}
+@mixin box-shadow-2
+{
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
