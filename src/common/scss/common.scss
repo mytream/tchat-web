@@ -153,7 +153,7 @@
 @include build-colors-hover('primary-dark', $color-primary-dark);
 @include build-colors-hover('primary', $color-primary);
 
-@include build-font-sizes(12, 60);
+@include build-font-sizes(12, 100);
 
 .fz-0
 {
@@ -232,6 +232,10 @@
   overflow-y: scroll;
 }
 .scroll-y-auto
+{
+  overflow-y: auto;
+}
+.overflow-hidden
 {
   overflow-y: auto;
 }

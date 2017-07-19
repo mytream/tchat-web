@@ -1,0 +1,41 @@
+#tab-bar.demo {
+  display: flex;
+  flex-direction: column;
+}
+#tab-bar .demoName {
+  height: 0.8rem;
+}
+
+#tab-bar .demo-preview-item,
+#tab-bar .demo-preview-item .am-tab-bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#tab-bar .demo-preview-item .am-tab-bar {
+  background-color: white;
+}
+
+.container-basic{
+  height: 100%;
+  overflow: hidden;
+
+  .am-tab-bar{
+    height: 100%;
+    overflow: hidden;
+
+    .am-tab-bar-content{
+      height: 100%;
+      padding-bottom: 1rem;
+      overflow: hidden;
+
+      .am-tab-bar-tabpane {
+        background-color: #fff;
+        height: 100%;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

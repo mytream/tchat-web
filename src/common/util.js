@@ -4,7 +4,7 @@ import React from 'react'
 import fetch from 'isomorphic-fetch'
 import uuid from 'node-uuid'
 import constants from './constants'
-import { Modal, notification, message } from 'tezign-react-ui'
+// import { notification, message } from 'antd-mobile'
 import Cookies from 'js-cookie'
 
 const regUTC = /^\d{4}\-\d{2}\-\d{2}T\d{2}\:\d{2}\:\d{2}[\-\+]{1}\d{2}\:\d{2}$/i;
@@ -22,17 +22,17 @@ const BB = ["","拾","佰","仟","万","亿","圆",""];
 const CC = ["角", "分", "厘"];
 
 const FILE_THUMBS = {};
-FILE_THUMBS.defualt = require('../components/Project/images/file.png');
-FILE_THUMBS.ai   = require('../components/Project/images/file-ai.png');
-FILE_THUMBS.doc  = require('../components/Project/images/file-doc.png');
-FILE_THUMBS.gif  = require('../components/Project/images/file-gif.png');
-FILE_THUMBS.jpeg = require('../components/Project/images/file-jpeg.png');
-FILE_THUMBS.jpg  = require('../components/Project/images/file-jpg.png');
-FILE_THUMBS.page = require('../components/Project/images/file-page.png');
-FILE_THUMBS.pdf  = require('../components/Project/images/file-pdf.png');
-FILE_THUMBS.png  = require('../components/Project/images/file-png.png');
-FILE_THUMBS.ps   = require('../components/Project/images/file-ps.png');
-FILE_THUMBS.xls  = require('../components/Project/images/file-xls.png');
+// FILE_THUMBS.defualt = require('../components/Project/images/file.png');
+// FILE_THUMBS.ai   = require('../components/Project/images/file-ai.png');
+// FILE_THUMBS.doc  = require('../components/Project/images/file-doc.png');
+// FILE_THUMBS.gif  = require('../components/Project/images/file-gif.png');
+// FILE_THUMBS.jpeg = require('../components/Project/images/file-jpeg.png');
+// FILE_THUMBS.jpg  = require('../components/Project/images/file-jpg.png');
+// FILE_THUMBS.page = require('../components/Project/images/file-page.png');
+// FILE_THUMBS.pdf  = require('../components/Project/images/file-pdf.png');
+// FILE_THUMBS.png  = require('../components/Project/images/file-png.png');
+// FILE_THUMBS.ps   = require('../components/Project/images/file-ps.png');
+// FILE_THUMBS.xls  = require('../components/Project/images/file-xls.png');
 
 const AppLoaderInnerHTML = `
   <div class="loader-content">

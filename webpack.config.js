@@ -32,7 +32,8 @@ const config = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+    extensions: ['', 'js', 'jsx', '.web.js', '.js', '.json'],
   },
   postcss: [autoprefixer({ browsers: ['last 2 versions', 'ie > 8'] })],
   module: {
@@ -75,5 +76,24 @@ config.module.loaders.push({
   loaders: ['style', 'css', 'less']
 });
 
-module.exports = config;
+// svg loader
+console.log(require.resolve('antd-mobile').replace(/warn\.js$/, ''));
+const svgDirs = [
+  // require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
+  path.resolve(__dirname, 'antd-mobile/lib'),  // 2. 自己私人的 svg 存放目录
+  // path.resolve(__dirname, 'src/my-project-svg-foler'),  // 2. 自己私人的 svg 存放目录
+];
+config.module.loaders.push({
+  test: /\.(svg)$/i,
+  loader: 'svg-sprite',
+  include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
+});
 
+// npm install postcss-pxtorem@^3.3.1 --save-dev
+const pxtorem = require('postcss-pxtorem');
+config.postcss.push(pxtorem({
+  rootValue: 100,
+  propWhiteList: [],
+}));
+
+module.exports = config;
