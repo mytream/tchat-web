@@ -16,7 +16,7 @@ const constants = {
 
 constants.COOKIE_DOMAIN = '.tezign.com';
 if(__DEV_MODEL__){
-  constants.COOKIE_DOMAIN = '192.168.199.135';
+  constants.COOKIE_DOMAIN = 'localhost';
 }
 
 

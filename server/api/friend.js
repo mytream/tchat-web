@@ -25,8 +25,6 @@ router.get('/friend/list', async function (ctx, next) {
     console.error(e);
     ctx.body = 'error';
   }
-
-
 });
 
 router.get('/friend/one', async function (ctx, next) {
