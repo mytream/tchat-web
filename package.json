@@ -55,7 +55,7 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
-    "lodash": "^4.6.1",
+    "lodash": "^4.17.4",
     "md5": "^2.1.0",
     "moment": "^2.12.0",
     "mongoose": "^4.11.3",
@@ -65,13 +65,14 @@
     "react-icons": "^2.2.5",
     "react-image-crop": "^1.0.0-rc8",
     "react-pull-to-refresh": "^1.0.6",
-    "react-redux": "^4.4.5",
+    "react-redux": "^5.0.5",
     "react-router": "^2.5.2",
     "react-waypoint": "^3.1.0",
     "redux": "^3.3.1",
-    "redux-actions": "^0.9.1",
-    "redux-promise": "^0.5.1",
+    "redux-actions": "^2.2.1",
+    "redux-devtools": "^3.4.0",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.0.1",
-    "socket.io-client": "^1.4.8"
+    "socket.io-client": "^2.0.3"
   }
 }

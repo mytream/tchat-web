@@ -279,15 +279,15 @@ ENUM.HTTP_CODE = {
   EXCEPTION: {code: 500, name: "服务器异常"}
 };
 ENUM.RESULT_CODE = {
-  BAD_REQUEST: {code: "-2", name: "您请求的参数不正确"},
-  NOT_FOUND: {code: "-1", name: "该服务接口不存在"},
-  SUCCESS: {code: "0", name: "请求成功"},
-  EXCEPTION: {code: "1", name: "服务接口发生异常"},
-  FORBIDDEN_OPERATION: {code: "2", name: "没有权限访问该接口"},
-  NOT_BE_DESIGNER: {code: "3", name: "只有设计师才能访问该接口"},
-  NOT_BE_CUSTOMER: {code: "4", name: "只有客户才能访问该接口"},
-  ILLEGAL_USER: {code: "5", name: "这是一个非法的用户"},
-  ILLEGAL_PROJECT: {code: "6", name: "这是一个非法的项目"}
+  BAD_REQUEST: {code: -2, name: "您请求的参数不正确"},
+  NOT_FOUND: {code: -1, name: "该服务接口不存在"},
+  SUCCESS: {code: 0, name: "请求成功"},
+  EXCEPTION: {code: 1, name: "服务接口发生异常"},
+  FORBIDDEN_OPERATION: {code: 2, name: "没有权限访问该接口"},
+  NOT_BE_DESIGNER: {code:3, name: "只有设计师才能访问该接口"},
+  NOT_BE_CUSTOMER: {code: 4, name: "只有客户才能访问该接口"},
+  ILLEGAL_USER: {code: 5, name: "这是一个非法的用户"},
+  ILLEGAL_PROJECT: {code: 6, name: "这是一个非法的项目"}
 };
 ENUM.COMMON_CODE = {
   DATA_ERROR:{
@@ -374,15 +374,15 @@ for(let key in ENUM.PROJECT_TYPE_OPTIONS){
 
 
 
-ENUM.PROJECT_STYLE_OPTIONS = [
-  {code: 1, name: '极简', cover: require('./images/tag_minimal.png')},
-  {code: 2, name: '扁平', cover: require('./images/tag_bianping.png')},
-  {code: 3, name: '拟物', cover: require('./images/tag_niwu.png')},
-  {code: 4, name: '活泼', cover: require('./images/tag_huopo.png')},
-  {code: 5, name: '商业', cover: require('./images/tag_shangwu.png')},
-  {code: 6, name: '磨砂', cover: require('./images/tag_blur.png')},
-  {code: 7, name: 'Material Design', cover: require('./images/tag_materialdesign.png')}
-];
+// ENUM.PROJECT_STYLE_OPTIONS = [
+//   {code: 1, name: '极简', cover: require('./images/tag_minimal.png')},
+//   {code: 2, name: '扁平', cover: require('./images/tag_bianping.png')},
+//   {code: 3, name: '拟物', cover: require('./images/tag_niwu.png')},
+//   {code: 4, name: '活泼', cover: require('./images/tag_huopo.png')},
+//   {code: 5, name: '商业', cover: require('./images/tag_shangwu.png')},
+//   {code: 6, name: '磨砂', cover: require('./images/tag_blur.png')},
+//   {code: 7, name: 'Material Design', cover: require('./images/tag_materialdesign.png')}
+// ];
 
 ENUM.SKILL_FIELDS_OPTIONS = [
   {code: '1', name: '日化用品'},

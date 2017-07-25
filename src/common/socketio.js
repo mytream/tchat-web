@@ -4,7 +4,7 @@
 import io from 'socket.io-client'
 import Cookie from 'js-cookie'
 import constants from './constants'
-import Message from './../services/message'
+import cache from './cache'
 
 let socket;
 let service = {};
@@ -21,7 +21,7 @@ const MSG_TYPE = {
 
 
 
-var events = {};
+const events = {};
 
 // 建立ws链接
 service.open = ()=>{
@@ -29,30 +29,27 @@ service.open = ()=>{
 
   socket = io.connect(API_ORIGIN);
 
-
   socket.on(MSG_TYPE.FIRST_CONNECT,function (data) {
     console.log('first-connect: ' + data);
 
     // 获得用户ID
-    var userId = Cookie.get(constants.C_XUID);
-
-    // 查询出需要通知的用户ID列表
-    Message.getCustomerList().then((customerIds)=>{
-      socket.emit(MSG_TYPE.FIRST_CONNECT,{
-        userId: userId,
-        notifyIds: customerIds
-      });
-    })
-
-
+    cache.get(constants.X_USER_ID).then(userId => {
+      socket.emit(MSG_TYPE.FIRST_CONNECT, userId);
+    }, err => {
+      console.error(err);
+      socket.emit(MSG_TYPE.FIRST_CONNECT, null);
+    });
   });
 
-  socket.on(MSG_TYPE.GREETING, function (data) {
-    console.log('validate-success: ' + data);
+  socket.on(MSG_TYPE.GREETING, function (userInfo) {
+    console.log('validate-success: ', userInfo);
+
+    cache.set(constants.X_USER_ID, userInfo.userId).then(()=>{});
+    cache.set(constants.CACHE_KEYS.CURRENT_USER, userInfo).then(()=>{});
   });
 
   socket.on(MSG_TYPE.ROOT_MSG,function (data) {
-    console.log('system msg: ' + data);
+    console.log('system msg: ', data);
   });
 
   socket.on(MSG_TYPE.ON_GOING,function (data) {
@@ -60,11 +57,11 @@ service.open = ()=>{
     console.log(data);
 
     // 用KEY作为区分
-    var key = data.code;
+    const key = data.code;
 
-    for(var msgKey in events){
-      if(msgKey.startsWith(key+'-')){
-        service.trigger(msgKey,data.result);
+    for(const msgKey in events){
+      if(msgKey.startsWith(key)){
+        service.trigger(msgKey, data.result);
       }
     }
   });
@@ -73,6 +70,8 @@ service.open = ()=>{
   socket.on('disconnect',(err)=>{
     console.log('disconnect ... ');
     console.error(err);
+
+    // todo: 调用接口通知下线
   });
 
 };
@@ -91,8 +90,8 @@ service.remove = function (msgKey, handler) {
     return;
   }
 
-  var handlers = events[msgKey];
-  for(var i in handlers){
+  const handlers = events[msgKey];
+  for(const i in handlers){
     if(handlers[i] === handler){
       handlers.splice(i,1);
       break;

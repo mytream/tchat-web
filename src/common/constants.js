@@ -14,32 +14,20 @@ const constants = {
   PATH: window.location.origin + '/'
 };
 
-constants.COOKIE_DOMAIN = '.tezign.com';
-if(__DEV_MODEL__){
-  constants.COOKIE_DOMAIN = 'localhost';
-}
+constants.X_USER_ID = "x-user-id";
 
+constants.COOKIE_DOMAIN = 'localhost';
 
-if (__DEV__) {
-  constants.API_ORIGIN = 'http://123.56.93.88:8080';
-}
-if (__QA__) {
-  constants.API_ORIGIN = 'https://service.tezign.com';
-}
-if (__YZ__) {
-  constants.API_ORIGIN = 'https://service.tezign.com';
-}
-if (__DEMO__) {
-  constants.API_ORIGIN = 'https://service.tezign.com';
-}
-if (__PROD__) {
-  constants.API_ORIGIN = 'https://service.tezign.com';
-}
+constants.API_ORIGIN = 'http://192.168.199.135:8080';
 
 // 页面名称
 constants.PAGES = {
   HOME: 'home',
   CHAT_LIST: 'chatList',
+
+  MESSAGE: 'msg',
+  USER: 'users',
+  ME: 'me',
 };
 
 // 请求状态码
@@ -49,6 +37,25 @@ constants.HTTP_STATUS = {
 
   INVALID_TOKEN: '403',
   PERMISSION_DENIED: '404'
+};
+
+constants.MSG_CODE = {
+  NOTES: '17001', // 留言
+  COUNT: '1', // 消息数汇总
+  TREND: '2', // 项目动态
+  TREND_COUNT: '3', // 项目动态未读数
+  NEWS: '4', // 站内信
+  NEWS_COUNT: '5', //站内信未读数
+  PROJECT_LOG: '6',//项目日志
+  WECHAT_BIND_SUCCESS: '0', // 微信绑定成功
+  WECHAT_HAS_BOUND: '14001',//微信账号已被绑定其他账号
+  DESIGNER_COMMIT_CONTRACT: '16001',//站内信未读数
+  DESIGNER_RESET_CONTRACT: '16002',//设计师重置了合同
+  MESSAGE: '17001',//留言
+  MESSAGE_COUNT: '17002',//留言推送未读数
+  ON_LINE: '10001',//上线信息
+  OFF_LINE: '10002',//下线信息
+  USER_STATE: '10003',//用户状态
 };
 
 

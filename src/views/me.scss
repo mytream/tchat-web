@@ -1,0 +1,22 @@
+@import "../common/scss/variables";
+
+.me-container{
+  text-align: center;
+  padding: 20px 20px;
+
+  input {
+    margin-top: 20px;
+    display: block;
+    padding: 0 20px;
+    height: 72px;
+    line-height: 72px;
+    border: 1px solid $color-primary;
+  }
+
+  button {
+    width: 100%;
+    border: 1px solid $color-primary;
+    line-height: 48px;
+    margin-top: 20px;
+  }
+}

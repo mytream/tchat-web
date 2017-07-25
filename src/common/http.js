@@ -4,7 +4,6 @@ import Cookies from 'js-cookie'
 import _ from 'lodash';
 import constants from './constants'
 import ENUM from './enum'
-import {message} from 'tezign-react-ui'
 
 let events = {
   [ENUM.HTTP_CODE.BAD_REQUEST.code]: [(err)=> {
@@ -52,7 +51,7 @@ let events = {
 };
 
 function showGlobalTip(msg) {
-  // message.error(msg);
+  // console.error(msg);
 }
 
 function http(url, options) {
