@@ -47,7 +47,22 @@ const config = {
       test: /\.html$/,
       loader: 'html',
       include: path.join(__dirname, 'src')
-    }]
+    }],
+    rules: [
+      {
+        test: /\.(css)|(scss)$/,
+        use: [
+          'isomorphic-style-loader',
+          {
+            loaders:['style', 'css', 'postcss', 'sass'],
+            options: {
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+        ]
+      }
+    ]
   }
 };
 

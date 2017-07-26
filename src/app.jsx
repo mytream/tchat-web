@@ -1,7 +1,5 @@
 import './app.scss'
 
-import { Router, Route } from 'react-router'
-
 // import 'babel-polyfill'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
@@ -11,6 +9,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Root from './containers/Root.jsx'
+import Test from './containers/Test.jsx'
 
 import SOCKET from './common/socketio';
 
@@ -18,7 +17,7 @@ import SOCKET from './common/socketio';
 SOCKET.open();
 
 ReactDOM.render(
-  <Root />,
+  <Test />,
   document.querySelector('#rc-root')
 );
 

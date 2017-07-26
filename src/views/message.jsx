@@ -1,7 +1,8 @@
-import './message.scss'
+import s from  './message.scss'
 
 import React from 'react'
-import { NavBar, Icon } from 'antd-mobile'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+// import { NavBar } from 'antd-mobile'
 
 import MdChildCare from 'react-icons/lib/md/child-care'
 import TiUser from 'react-icons/lib/ti/user'
@@ -9,7 +10,6 @@ import TiUser from 'react-icons/lib/ti/user'
 import _ from 'lodash'
 import moment from 'moment'
 
-import util from '../common/util'
 import history from '../common/history'
 import cache from '../common/cache'
 import constants from '../common/constants'
@@ -34,7 +34,7 @@ class MessagePage extends React.Component {
   componentDidMount(){
     // 获取消息
     Message.fetchMessages().then(msgs => {
-      console.log(msgs);
+      // console.log(msgs);
       this.setState({
         msgs: msgs || [],
       }, this.scrollMsgContaner);
@@ -83,22 +83,22 @@ class MessagePage extends React.Component {
   render() {
     return (
       <div className="display-flex message-container">
-        <NavBar
-          mode="light"
-          onLeftClick={() => {
-            history.push('me');
-          }}
-          leftContent={
-            <TiUser style={{fontSize: 60}} />
-          }
-          rightContent={
-            <MdChildCare style={{fontSize: 60}} onClick={() => {
-              history.push('user');
-            } }/>
-          }
-        >
-          聊天室
-        </NavBar>
+        {/*<NavBar*/}
+          {/*mode="light"*/}
+          {/*onLeftClick={() => {*/}
+            {/*history.push('me');*/}
+          {/*}}*/}
+          {/*leftContent={*/}
+            {/*<TiUser style={{fontSize: 60}} />*/}
+          {/*}*/}
+          {/*rightContent={*/}
+            {/*<MdChildCare style={{fontSize: 60}} onClick={() => {*/}
+              {/*history.push('user');*/}
+            {/*} }/>*/}
+          {/*}*/}
+        {/*>*/}
+          {/*聊天室*/}
+        {/*</NavBar>*/}
 
         {this.renderMessages()}
 
@@ -153,4 +153,4 @@ class MessagePage extends React.Component {
   }
 }
 
-export default MessagePage;
+export default withStyles(s)(MessagePage);

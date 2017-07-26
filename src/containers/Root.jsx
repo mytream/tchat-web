@@ -1,13 +1,14 @@
 import React from 'react';
-import { Router, Route, IndexRoute, IndexRedirect } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
 import history from '../common/history'
-import constants from '../common/constants'
+
+// import 'antd-mobile/lib/nav-bar/style/css.web'
 
 import msgView from '../views/message.jsx'
-import userView from '../views/users.jsx'
-import meView from '../views/me.jsx'
+// import userView from '../views/users.jsx'
+// import meView from '../views/me.jsx'
 
-// 启动websocket
+// 启动websockete
 // ws.open();
 
 const Root = function(props) {
@@ -16,8 +17,8 @@ const Root = function(props) {
       <Route path="/">
         <IndexRoute component={msgView} />
         <Route path="msg" component={msgView} />
-        <Route path="user" component={userView} />
-        <Route path="me" component={meView} />
+        {/*<Route path="user" component={userView} />*/}
+        {/*<Route path="me" component={meView} />*/}
       </Route>
     </Router>
   );
