@@ -4,22 +4,12 @@ import {FETCH_MESSAGES, ADD_MESSAGE} from './actions'
 
 export default handleActions({
   [FETCH_MESSAGES](state, action){
-    // todo:
-    // return [{
-    //   name: '小明',
-    //   age: 18,
-    // },{
-    //   name: '小红',
-    //   age: 15,
-    // }];
+    if(action.error){
+      console.error(action.payload);
+      return state;
+    }
 
-    return Promise.then([{
-      name: '小明',
-      age: 18,
-    },{
-      name: '小红',
-      age: 15,
-    }]);
+    return action.payload;
   },
   [ADD_MESSAGE](state, action){
     const newMsgs = _.clone(state);

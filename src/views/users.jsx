@@ -6,6 +6,7 @@ import { NavBar, Icon } from 'antd-mobile'
 import history from '../common/history';
 import User from '../services/user';
 
+
 class test1Page extends React.Component {
 
   constructor(props) {

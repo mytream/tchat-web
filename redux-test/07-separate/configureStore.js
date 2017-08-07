@@ -2,7 +2,7 @@ import { createStore, combineReducers} from 'redux'
 
 import userInfoReducer from './user/reducer'
 // import usersReducer from './users/reducer'
-// import messagesReducer from './messages/reducer'
+import messagesReducer from './messages/reducer'
 
 const reducers = combineReducers({
   userInfo: userInfoReducer,

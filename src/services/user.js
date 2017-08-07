@@ -3,6 +3,9 @@ import constants from '../common/constants'
 import cache from '../common/cache'
 
 export default {
+  setCurrentUser(userInfo){
+    return cache.get(constants.CACHE_KEYS.CURRENT_USER, userInfo);
+  },
   getCurrentUser(){
     return cache.get(constants.CACHE_KEYS.CURRENT_USER);
   },

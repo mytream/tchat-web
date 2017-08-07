@@ -1,8 +1,8 @@
 import s from  './message.scss'
 
 import React from 'react'
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-// import { NavBar } from 'antd-mobile'
+// import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import { NavBar } from 'antd-mobile'
 
 import MdChildCare from 'react-icons/lib/md/child-care'
 import TiUser from 'react-icons/lib/ti/user'
@@ -83,22 +83,22 @@ class MessagePage extends React.Component {
   render() {
     return (
       <div className="display-flex message-container">
-        {/*<NavBar*/}
-          {/*mode="light"*/}
-          {/*onLeftClick={() => {*/}
-            {/*history.push('me');*/}
-          {/*}}*/}
-          {/*leftContent={*/}
-            {/*<TiUser style={{fontSize: 60}} />*/}
-          {/*}*/}
-          {/*rightContent={*/}
-            {/*<MdChildCare style={{fontSize: 60}} onClick={() => {*/}
-              {/*history.push('user');*/}
-            {/*} }/>*/}
-          {/*}*/}
-        {/*>*/}
-          {/*聊天室*/}
-        {/*</NavBar>*/}
+        <NavBar
+        mode="light"
+        onLeftClick={() => {
+          history.push('me');
+        }}
+        leftContent={
+          <TiUser style={{fontSize: 60}} />
+        }
+        rightContent={
+          <MdChildCare style={{fontSize: 60}} onClick={() => {
+            history.push('user');
+          } }/>
+        }
+      >
+        聊天室
+      </NavBar>
 
         {this.renderMessages()}
 
@@ -153,4 +153,5 @@ class MessagePage extends React.Component {
   }
 }
 
-export default withStyles(s)(MessagePage);
+export default MessagePage;
+// export default withStyles(s)(MessagePage);
